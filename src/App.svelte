@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Counter from './Counter.svelte'
+	import Links from './Links.svelte'
 	export let name: string;
 </script>
 
@@ -7,6 +8,7 @@
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 	<Counter />
+	<Links />
 </main>
 
 <style>
