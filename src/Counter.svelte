@@ -1,8 +1,15 @@
 <script lang="ts">
-	export let count: number = 0;
-    export const increment = () => ++count;
+	let count: number = 0;
+    const increment = () => ++count;
+    const reset = () => count = 0;
 </script>
 
 <div>
-	<button on:click={increment}>👏 {count}</button>
+    {#if count >= 3}
+        🎉🎉🎉
+        <button on:click={reset}>👏 {count}</button>
+        🎉🎉🎉
+    {:else}
+        <button on:click={increment}>👏 {count}</button>
+    {/if}
 </div>
