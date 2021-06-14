@@ -14,8 +14,8 @@
 </script>
 
 <ul>
-    {#each links as link}
-        <li><a target="_blank" href={link.url}>{link.name}</a></li>
+    {#each links as { url, name }, i}
+        <li><a target="_blank" href={url}>{i + 1}. {name}</a></li>
     {/each}
 </ul>
 
