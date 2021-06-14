@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Async from './Async.svelte'
 	import Counter from './Counter.svelte'
 	import Links from './Links.svelte'
 	export let name: string;
@@ -8,6 +9,7 @@
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 	<Counter />
+	<Async />
 	<Links />
 </main>
 
