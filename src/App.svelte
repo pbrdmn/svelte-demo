@@ -2,6 +2,9 @@
   import Async from "./Async.svelte";
   import Counter from "./Counter.svelte";
   import Links from "./Links.svelte";
+  import Grid from "./components/Grid.svelte";
+  import Section from "./components/Section.svelte";
+
   export let name: string;
 
   const onCounterUpdate = ({ detail }: CustomEvent<number>) =>
@@ -14,16 +17,23 @@
     Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
-  <Counter on:counterUpdate={onCounterUpdate} />
-  <Async />
-  <Links />
+  <Grid>
+    <Section>
+      <Counter on:counterUpdate={onCounterUpdate} />
+    </Section>
+    <Section>
+      <Async />
+    </Section>
+    <Section>
+      <Links />
+    </Section>
+  </Grid>
 </main>
 
 <style>
   main {
     text-align: center;
     padding: 1em;
-    max-width: 240px;
     margin: 0 auto;
   }
 
@@ -32,11 +42,5 @@
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
   }
 </style>

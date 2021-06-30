@@ -7,6 +7,7 @@
   };
 </script>
 
+<h3>Async button</h3>
 <button on:click={startTimer} aria-disabled={!done}
   >{done ? "🛑 Done" : "⏳ Wait"}</button
 >

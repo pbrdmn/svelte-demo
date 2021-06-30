@@ -10,12 +10,8 @@
   const reset = () => (count = 0);
 </script>
 
+<h3>Counter button</h3>
 <div>
-  {#if count >= 3}
-    🎉🎉🎉
-    <button on:click={reset}>👏 {count}</button>
-    🎉🎉🎉
-  {:else}
-    <button on:click={increment}>👏 {count}</button>
-  {/if}
+  <button on:click={increment}>👏 {count}</button>
+  <button on:click={reset}>⏪ Reset</button>
 </div>
